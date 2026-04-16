@@ -1,0 +1,34 @@
+
+- Jenkins password there....Remember
+
+- Configure git in Jenkins
+	Freestyle project
+	Repository URL
+
+- Poll SCM / Webhook trigger
+	H/5****
+
+- Post build actions
+	Trigger only build is stable
+
+
+- Pipeline stage view = plugins
+
+- Pipeline creation
+	Pipeline script
+
+pipeline {
+	agent any 
+
+	stages {
+		stage("Build"){
+			steps{
+				echo "Build"
+			}
+		}
+}
+}
+
+- Jenkinsfile = contains pipeline script
+
+- SCM -> Git
