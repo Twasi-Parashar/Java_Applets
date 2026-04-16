@@ -1,0 +1,40 @@
+- Integrating Maven 
+	under maven -> add maven
+
+- Creating pom.xml
+
+- Folder structure
+	pom.xml
+	src/main/java/com/example/App.java 
+	src/test/java/com/example/AppTest.java
+
+- Building the maven project using vs code commands
+	mvn clean test
+	mvn compile
+	mvn test
+	mvn clean install
+
+- Manage Jenkins -> Tools -> Maven Installations
+Name : M3
+MAVEN_HOME
+UNCHECKED
+
+- pipeline { 
+agent any 
+tools { 
+maven 'M3' 
+} 
+stages { 
+stage('Checkout Git') { 
+steps { 
+git branch: 'main', 
+url: 'https://github.com/balaganeshn/simple-maven-app' 
+} 
+} 
+stage('Build and Test') { 
+steps { 
+bat 'mvn clean test' 
+} 
+} 
+} 
+}
